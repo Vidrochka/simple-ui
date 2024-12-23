@@ -1,0 +1,16 @@
+[package]
+name = "simple-ui-engine"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+serde = { version = "*", features = ["derive"] }
+serde_json = "*"
+
+mint = { version = "*", features = ["serde"] }
+
+uuid = { version = "*", features = ["v4", "serde"] }
+
+ahash = { version = "*", features = ["serde"] }
+
+derive_builder = "*"
