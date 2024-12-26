@@ -1,4 +1,4 @@
-use crate::{layers::{FlexDirection, FlexLayerBuilder, Layer, RectangleShapeBuilder, Shape, ShapesLayerBuilder}, render::Render, style::FillStyleBuilder, view::{PartialView, View}};
+use crate::{layers::{FlexDirection, FlexLayerBuilder, Layer, RectangleShapeBuilder, Shape, ShapesLayerBuilder}, render::command::CommandRender, style::FillStyleBuilder, view::{PartialView, View}};
 
 
 #[test]
@@ -98,7 +98,7 @@ pub fn build_render_commands_ok() {
 
     view.replace_child_layers(id, partial_view);
 
-    let render = Render::new();
+    let render = CommandRender::new();
 
     let commands = render.build_render_command(&view);
 
